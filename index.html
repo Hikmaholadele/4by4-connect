@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4by4 Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="game-shell">
+
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">TWO PLAYER GAME</p>
+        <h1>4by4 <span>Connect</span></h1>
+        <p class="subtitle">Connect four pieces before your opponent does.</p>
+      </div>
+
+      <button id="restartBtn" class="restart-btn">
+        New Game
+      </button>
+    </header>
+
+    <section class="game-card">
+
+      <div class="status">
+        <div class="player-indicator">
+          <span id="playerDot" class="player-dot red"></span>
+          <div>
+            <span class="status-label">CURRENT TURN</span>
+            <strong id="turnText">Player 1</strong>
+          </div>
+        </div>
+
+        <div class="score">
+          <div>
+            <span>PLAYER 1</span>
+            <strong id="score1">0</strong>
+          </div>
+          <div>
+            <span>PLAYER 2</span>
+            <strong id="score2">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div id="board" class="board" aria-label="4by4 Connect game board"></div>
+
+      <p class="hint">Click an empty space to place your piece.</p>
+
+    </section>
+
+    <div id="result" class="result hidden">
+      <div class="result-card">
+        <span class="result-icon">✦</span>
+        <p id="resultLabel">GAME OVER</p>
+        <h2 id="resultText">Player 1 Wins!</h2>
+        <button id="playAgainBtn" class="play-again">
+          Play Again
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
